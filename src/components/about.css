@@ -1,0 +1,217 @@
+/* About.css */
+.about-me {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.about-me h2 {
+  font-size: 2.3rem;
+  margin-top: -0.2rem;
+  margin-bottom: -1rem;
+  color: #3B82F6;
+}
+
+.about-text {
+  font-size: 1.4rem;
+  color: #f4f4f4;
+  margin-bottom: -5px;
+  margin-top: -15px;
+  font-weight: 400;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  padding: 50px 20px;
+  max-width: 1130px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.about-box {
+  flex: 1 1 0;
+  min-width: 280px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: rgb(200, 197, 197) 2px solid;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+.about-box:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.about-box h3 {
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+}
+
+.about-description {
+  width: 75%; 
+  text-align: center;
+  margin: -0.3rem auto;
+  color: rgb(255, 255, 255);
+}
+
+/* Education Section */
+.education h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.education p {
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.education-logo {
+  display: block;
+  margin: 0 auto 30px auto;
+  width: 130px;
+  height: auto;
+}
+
+.skill-category {
+  margin-bottom: 1.2rem;
+  text-align: left;
+  color: black;
+}
+
+.skill-category h4 {
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.2rem;
+}
+
+.skill-category p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #2e2e2e;
+}
+
+.about-description-wrapper h3 {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .about-container {
+    gap: 30px;
+  }
+
+  .about-box {
+    min-width: 280px;
+    width: 100%;
+  }
+
+  .about-text {
+    font-size: 1.2rem;
+  }
+
+  .about-description {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 40px 20px;
+  }
+
+  .about-box {
+    width: 90%;
+    padding: 24px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  }
+
+  .about-text {
+    font-size: 1.3rem;
+  }
+
+  .about-me h2 {
+    font-size: 2rem;
+  }
+
+  .about-description-wrapper {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .about-description-wrapper h3 {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #000000;
+  }
+
+  .about-description {
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 0;
+    color: black;
+  }
+
+  .education-logo {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+
+  .skill-category h4 {
+    font-size: 1rem;
+  }
+
+  .skill-category p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 30px 15px;
+    gap: 20px;
+  }
+
+  .about-box {
+    width: 100%;
+    min-width: 240px;
+    padding: 18px;
+  }
+
+  .about-text {
+    font-size: 1.15rem;
+  }
+
+  .about-description {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .about-me h2 {
+    font-size: 1.8rem;
+  }
+
+  .education-logo {
+    width: 90px;
+  }
+}

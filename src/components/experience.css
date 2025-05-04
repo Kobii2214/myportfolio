@@ -1,0 +1,81 @@
+.experience {
+  padding: 2rem;
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.experience-description {
+  font-size: 1.4rem;
+  color: #f4f4f4;
+  margin-bottom: -10px;
+  margin-top: 27px;
+  font-weight: 400;
+}
+
+.experience h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #3B82F6;
+}
+
+.journey {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 4rem;
+  align-items: center;
+  justify-items: center;  
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.experience-item {
+  background-color: transparent;
+  padding: 20px; 
+  border: rgb(200, 197, 197) 2px solid;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 350px; 
+  height: 210px; 
+  transition: transform 0.3s ease;
+  font-size: 1rem; 
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+}
+
+
+.experience-item h3 {
+  font-size: 1.2rem; /* Increased font size */
+  margin-bottom: 0.3rem;
+  color: #3B82F6;
+}
+
+.experience-item p {
+  font-size: 1rem; /* Increased font size */
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+  .journey {
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 2rem;
+  }
+
+  .experience-item {
+    max-width: 100%;
+  }
+
+  .experience-description {
+    font-size: 1.2rem;
+  }
+
+  .experience h2 {
+    font-size: 2rem;
+  }
+}
