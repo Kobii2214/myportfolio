@@ -1,9 +1,8 @@
 import React from 'react';
 import './Hero.css';
+import Profile from "../assets/astronaut.png"
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { TypeAnimation } from 'react-type-animation';
-
-const profileImg = 'https://ui-avatars.com/api/?name=Kobe+Jamaal&background=000000&color=ffffff&size=280';
 
 const Hero = () => {
   return (
@@ -41,10 +40,8 @@ const Hero = () => {
         </div>
 
         <div className="hero-image">
-          <div className="image-wrapper">
-            <img src={profileImg} alt="Profile" />
-          </div>
-        </div>
+      <img src={Profile} alt="Floating Astronaut" className="astronaut" />
+      </div>
       </div>
     </section>
   );

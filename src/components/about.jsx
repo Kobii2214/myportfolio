@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
 import logo from '../assets/schoollogo.png';
-import FadeInWhenVisible from './FadeInWhenVisible'; // animation wrapper
+import FadeInWhenVisible from './FadeInWhenVisible';
 
 const About = () => {
   return (
@@ -15,7 +15,6 @@ const About = () => {
       </FadeInWhenVisible>
 
       <div className="about-container">
-        {/* Education Card */}
         <div className="about-box">
           <FadeInWhenVisible delay={0.2}>
             <div className="education">
@@ -28,7 +27,6 @@ const About = () => {
           </FadeInWhenVisible>
         </div>
 
-        {/* Skills Card */}
         <div className="about-box">
           <FadeInWhenVisible delay={0.3}>
             <div>

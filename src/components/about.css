@@ -1,4 +1,3 @@
-/* About.css */
 .about-me {
   margin-top: 3rem;
   text-align: center;
@@ -44,6 +43,7 @@
   flex-direction: column;
   justify-content: space-between;
   color: white;
+  z-index: 1000;
 }
 
 .about-box:hover {
@@ -62,7 +62,6 @@
   color: rgb(255, 255, 255);
 }
 
-/* Education Section */
 .education h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;

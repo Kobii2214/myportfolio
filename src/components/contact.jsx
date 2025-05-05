@@ -11,13 +11,13 @@ const Contact = () => {
       kobejamaalelisan@gmail.com
       </a>
       <div className="social-icons1">
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/Kobii2214" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-github"></i>
         </a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/kobe-elisan-15a446361?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-linkedin"></i>
         </a>
-        <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">
+        <a href="https://web.facebook.com/kobe.elisan.96" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-facebook"></i>
         </a>
       </div>

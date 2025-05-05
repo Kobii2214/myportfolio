@@ -8,7 +8,17 @@ import Blog from "./components/Blog";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from "react";
 
-// Galaxy background components
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 const Star = ({ top, left, animationDelay }) => (
   <div
     className="star"
@@ -46,13 +56,10 @@ const ScrollToHomeLink = ({ className, children }) => {
 
   useEffect(() => {
     if (shouldScroll && location.pathname === '/') {
-      const scrollToHome = () => {
-        const homeSection = document.getElementById('home');
-        if (homeSection) {
-          homeSection.scrollIntoView({ behavior: 'smooth' });
-        }
-      };
-      setTimeout(scrollToHome, 0);
+      const homeSection = document.getElementById('home');
+      if (homeSection) {
+        homeSection.scrollIntoView({ behavior: 'smooth' });
+      }
       setShouldScroll(false);
     }
   }, [shouldScroll, location]);
@@ -67,6 +74,7 @@ const ScrollToHomeLink = ({ className, children }) => {
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -79,20 +87,24 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isBlogPage = location.pathname === '/blog';
+
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav
+      className={`navbar ${isScrolled ? 'scrolled' : ''}`}
+      style={{ background: isBlogPage ? 'transparent' : '' }}
+    >
       <ScrollToHomeLink className="logo">Kobe</ScrollToHomeLink>
-      <div className={`burger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
-        <div className="burger-line"></div>
-        <div className="burger-line"></div>
-        <div className="burger-line"></div>
-      </div>
       <ul className={`nav-list ${isMenuOpen ? 'active' : ''}`}>
-        <li><a href="#about"><span>About</span></a></li>
-        <li><a href="#experience"><span>Experience</span></a></li>
-        <li><a href="#projects"><span>Projects</span></a></li>
-        <div className="divider"></div>
-        <li><Link to="/blog"><span>My Blog</span></Link></li>
+        {!isBlogPage && (
+          <>
+            <li className="desktop-only"><a href="#about"><span>About</span></a></li>
+            <li className="desktop-only"><a href="#experience"><span>Experience</span></a></li>
+            <li className="desktop-only"><a href="#projects"><span>Projects</span></a></li>
+            <div className="divider"></div>
+            <li className="mobile-only"><Link to="/blog"><span>My Blog</span></Link></li>
+          </>
+        )}
       </ul>
     </nav>
   );
@@ -129,7 +141,7 @@ function Home() {
     };
 
     window.addEventListener("scroll", onScroll);
-    onScroll(); // initial check
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -154,16 +166,15 @@ function Home() {
 
 function App() {
   return (
-    <>
+    <Router>
       <GalaxyBackground />
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
-        </Routes>
-      </Router>
-    </>
+      <ScrollToTop />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+      </Routes>
+    </Router>
   );
 }
 

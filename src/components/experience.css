@@ -49,13 +49,13 @@
 
 
 .experience-item h3 {
-  font-size: 1.2rem; /* Increased font size */
+  font-size: 1.2rem; 
   margin-bottom: 0.3rem;
   color: #3B82F6;
 }
 
 .experience-item p {
-  font-size: 1rem; /* Increased font size */
+  font-size: 1rem; 
   margin-bottom: 6px;
   color: #ffffff;
 }
@@ -63,7 +63,7 @@
 
 @media (max-width: 768px) {
   .journey {
-    grid-template-columns: 1fr; /* 1 card per row */
+    grid-template-columns: 1fr; 
     gap: 2rem;
   }
 

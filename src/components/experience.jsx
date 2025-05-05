@@ -1,6 +1,6 @@
 import React from 'react';
 import './Experience.css';
-import FadeInWhenVisible from './FadeInWhenVisible'; // Import your animation wrapper
+import FadeInWhenVisible from './FadeInWhenVisible';
 
 const Experience = () => {
   return (
