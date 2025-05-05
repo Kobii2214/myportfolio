@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.css';
+import './about.css';
 import logo from '../assets/schoollogo.png';
 import FadeInWhenVisible from './FadeInWhenVisible';
 
