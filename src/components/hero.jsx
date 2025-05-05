@@ -1,5 +1,5 @@
 import React from 'react';
-import './Hero.css';
+import './hero.css';
 import Profile from "../assets/astronaut.png"
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { TypeAnimation } from 'react-type-animation';
