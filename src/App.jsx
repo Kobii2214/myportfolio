@@ -3,6 +3,7 @@ import Hero from "./components/hero";
 import About from "./components/about";
 import Projects from "./components/Projects";
 import Experience from "./components/experience";
+import Certificates from "./components/certi";
 import Contact from "./components/contact";
 import Blog from "./components/Blog";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
@@ -100,6 +101,7 @@ const Navbar = () => {
           <>
             <li className="desktop-only"><a href="#about"><span>About</span></a></li>
             <li className="desktop-only"><a href="#experience"><span>Experience</span></a></li>
+            <li className="desktop-only"><a href="#certificates"><span>Certificates</span></a></li>
             <li className="desktop-only"><a href="#projects"><span>Projects</span></a></li>
             <div className="divider"></div>
             <li className="mobile-only"><Link to="/blog"><span>My Blog</span></Link></li>
@@ -155,6 +157,9 @@ function Home() {
       </section>
       <section id="experience" className="experience-section">
         <Experience />
+      </section>
+      <section id="certificates" className="certificates">
+        <Certificates />
       </section>
       <section id="projects" className="projects">
         <Projects />
